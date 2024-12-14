@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{63F68E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projections", "Projections", "{05066E05-5CEF-4EA9-B79B-1541FF9F8357}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuzluSozluk.Common", "Common\TuzluSozluk.Common\TuzluSozluk.Common.csproj", "{B17E262A-7E1A-47DD-85C7-49EC0D9028BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuzluSozluk.Common", "Common\TuzluSozluk.Common\TuzluSozluk.Common.csproj", "{B17E262A-7E1A-47DD-85C7-49EC0D9028BA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{741BA3E1-FD90-4D2A-BCA5-37C21E4A0AFC}"
 EndProject
@@ -19,25 +19,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{7FDC35AC-1783-45C3-A6E5-E93C77D33FB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuzluSozluk.Domain", "API\Core\TuzluSozluk.Domain\TuzluSozluk.Domain.csproj", "{914FD24A-1A10-42C7-859E-DD828D7DF961}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuzluSozluk.Domain", "API\Core\TuzluSozluk.Domain\TuzluSozluk.Domain.csproj", "{914FD24A-1A10-42C7-859E-DD828D7DF961}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuzluSozluk.Application", "API\Core\TuzluSozluk.Application\TuzluSozluk.Application.csproj", "{55BA7661-1755-4AEE-B0A1-FF9F581C0B45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuzluSozluk.Application", "API\Core\TuzluSozluk.Application\TuzluSozluk.Application.csproj", "{55BA7661-1755-4AEE-B0A1-FF9F581C0B45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuzluSozluk.Persistence", "API\Infrastructure\TuzluSozluk.Persistence\TuzluSozluk.Persistence.csproj", "{ACA6CAF8-E19D-467E-BD1D-3F778D6791B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuzluSozluk.Persistence", "API\Infrastructure\TuzluSozluk.Persistence\TuzluSozluk.Persistence.csproj", "{ACA6CAF8-E19D-467E-BD1D-3F778D6791B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuzluSozluk.Infrastucture", "API\Infrastructure\TuzluSozluk.Infrastucture\TuzluSozluk.Infrastucture.csproj", "{8575B74F-315A-4B21-8209-8A4197BB0F65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuzluSozluk.Infrastucture", "API\Infrastructure\TuzluSozluk.Infrastucture\TuzluSozluk.Infrastucture.csproj", "{8575B74F-315A-4B21-8209-8A4197BB0F65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuzluSozluk.API", "API\Presentation\TuzluSozluk.API\TuzluSozluk.API.csproj", "{909A2FA5-C042-4708-83EC-1D893AB5F3B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuzluSozluk.API", "API\Presentation\TuzluSozluk.API\TuzluSozluk.API.csproj", "{909A2FA5-C042-4708-83EC-1D893AB5F3B5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlazorWeb", "BlazorWeb", "{86B0CA11-017B-4403-8129-337E64150BF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuzluSozluk.FavoriteService", "Projections\TuzluSozluk.FavoriteService\TuzluSozluk.FavoriteService.csproj", "{AFAC9A7E-2400-4072-883F-1EC10A677811}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuzluSozluk.FavoriteService", "Projections\TuzluSozluk.FavoriteService\TuzluSozluk.FavoriteService.csproj", "{AFAC9A7E-2400-4072-883F-1EC10A677811}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuzluSozluk.UserService", "Projections\TuzluSozluk.UserService\TuzluSozluk.UserService.csproj", "{2DC411D1-70B1-48F1-9588-9EE72F793849}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuzluSozluk.UserService", "Projections\TuzluSozluk.UserService\TuzluSozluk.UserService.csproj", "{2DC411D1-70B1-48F1-9588-9EE72F793849}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuzluSozluk.VoteService", "Projections\TuzluSozluk.VoteService\TuzluSozluk.VoteService.csproj", "{4BB4F04E-8FEF-402F-8F2A-1CB675FABC09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuzluSozluk.VoteService", "Projections\TuzluSozluk.VoteService\TuzluSozluk.VoteService.csproj", "{4BB4F04E-8FEF-402F-8F2A-1CB675FABC09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuzluSozluk.WebApp", "Clients\BlazorWeb\TuzluSozluk.WebApp\TuzluSozluk.WebApp.csproj", "{76FEDD21-41ED-46BE-9C49-40C1C55B3BF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuzluSozluk.WebApp", "Clients\BlazorWeb\TuzluSozluk.WebApp\TuzluSozluk.WebApp.csproj", "{76FEDD21-41ED-46BE-9C49-40C1C55B3BF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
