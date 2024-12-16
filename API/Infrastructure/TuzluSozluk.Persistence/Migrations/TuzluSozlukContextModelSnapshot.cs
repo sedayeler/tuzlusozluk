@@ -41,7 +41,7 @@ namespace TuzluSozluk.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("EmailConfirmations");
+                    b.ToTable("email_confirmations");
                 });
 
             modelBuilder.Entity("TuzluSozluk.Domain.Entities.Entry", b =>
@@ -68,7 +68,7 @@ namespace TuzluSozluk.Persistence.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Entries");
+                    b.ToTable("entries");
                 });
 
             modelBuilder.Entity("TuzluSozluk.Domain.Entities.EntryComment", b =>
@@ -96,7 +96,7 @@ namespace TuzluSozluk.Persistence.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("EntryComments");
+                    b.ToTable("entry_comments");
                 });
 
             modelBuilder.Entity("TuzluSozluk.Domain.Entities.EntryCommentFavorite", b =>
@@ -120,7 +120,7 @@ namespace TuzluSozluk.Persistence.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("EntryCommentFavorites");
+                    b.ToTable("entry_comment_favorites");
                 });
 
             modelBuilder.Entity("TuzluSozluk.Domain.Entities.EntryCommentVote", b =>
@@ -150,7 +150,7 @@ namespace TuzluSozluk.Persistence.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("EntryCommentVotes");
+                    b.ToTable("entry_comment_votes");
                 });
 
             modelBuilder.Entity("TuzluSozluk.Domain.Entities.EntryFavorite", b =>
@@ -174,7 +174,7 @@ namespace TuzluSozluk.Persistence.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("EntryFavorites");
+                    b.ToTable("entry_favorites");
                 });
 
             modelBuilder.Entity("TuzluSozluk.Domain.Entities.EntryVote", b =>
@@ -201,7 +201,7 @@ namespace TuzluSozluk.Persistence.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("EntryVotes");
+                    b.ToTable("entry_votes");
                 });
 
             modelBuilder.Entity("TuzluSozluk.Domain.Entities.User", b =>
@@ -238,7 +238,7 @@ namespace TuzluSozluk.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("users");
                 });
 
             modelBuilder.Entity("TuzluSozluk.Domain.Entities.Entry", b =>

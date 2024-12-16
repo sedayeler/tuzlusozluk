@@ -1,4 +1,5 @@
 using TuzluSozluk.Persistence;
+using TuzluSozluk.Persistence.Contexts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,13 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddPersistenceService(builder.Configuration);
 
 var app = builder.Build();
+
+//using (var scope = app.Services.CreateScope())
+//{
+//    var serviceProvider = scope.ServiceProvider;
+//    var seedData = new SeedData();
+//    await seedData.SeedAsync(serviceProvider);
+//}
 
 if (app.Environment.IsDevelopment())
 {
