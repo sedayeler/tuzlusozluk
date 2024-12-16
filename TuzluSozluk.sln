@@ -39,6 +39,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuzluSozluk.VoteService", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuzluSozluk.WebApp", "Clients\BlazorWeb\TuzluSozluk.WebApp\TuzluSozluk.WebApp.csproj", "{76FEDD21-41ED-46BE-9C49-40C1C55B3BF1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{71D50D9A-5978-44EE-9E1B-5AF6364C006A}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
