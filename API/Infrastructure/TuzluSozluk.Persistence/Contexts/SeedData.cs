@@ -1,5 +1,4 @@
 ﻿using Bogus;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -31,10 +30,10 @@ namespace TuzluSozluk.Persistence.Contexts
 
         public async Task SeedAsync(IServiceProvider serviceProvider)
         {
+            var _context = serviceProvider.GetService<TuzluSozlukContext>();
+
             var users = GetUsers();
             var userIds = users.Select(i => i.Id);
-
-            var _context = serviceProvider.GetService<TuzluSozlukContext>();
 
             await _context.users.AddRangeAsync(users);
 
