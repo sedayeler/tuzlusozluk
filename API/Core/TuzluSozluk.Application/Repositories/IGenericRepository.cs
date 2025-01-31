@@ -19,8 +19,8 @@ namespace TuzluSozluk.Application.Repositories
         Task<bool> AddAsync(TEntity entity);
         Task<bool> AddRangeAsync(List<TEntity> entities);
         bool Update(TEntity entity);
-        bool Remove(TEntity entity);
         Task<bool> RemoveAsync(Guid id);
+        bool Remove(TEntity entity);
         bool RemoveRange(List<TEntity> entities);
         Task<int> SaveAsync();
     }

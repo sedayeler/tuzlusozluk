@@ -1,3 +1,4 @@
+using TuzluSozluk.Application;
 using TuzluSozluk.Persistence;
 using TuzluSozluk.Persistence.Contexts;
 
@@ -8,7 +9,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddPersistenceService(builder.Configuration);
+builder.Services.AddPersistenceServices(builder.Configuration);
+builder.Services.AddApplicationServices();
 
 var app = builder.Build();
 

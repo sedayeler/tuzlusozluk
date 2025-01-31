@@ -23,10 +23,10 @@ namespace TuzluSozluk.Persistence.Contexts
 
         public DbSet<User> users { get; set; }
         public DbSet<Entry> entries { get; set; }
-        public DbSet<EntryVote> entry_votes { get; set; }
-        public DbSet<EntryFavorite> entry_favorites { get; set; }
         public DbSet<EntryComment> entry_comments { get; set; }
+        public DbSet<EntryVote> entry_votes { get; set; }
         public DbSet<EntryCommentVote> entry_comment_votes { get; set; }
+        public DbSet<EntryFavorite> entry_favorites { get; set; }
         public DbSet<EntryCommentFavorite> entry_comment_favorites { get; set; }
         public DbSet<EmailConfirmation> email_confirmations { get; set; }
 

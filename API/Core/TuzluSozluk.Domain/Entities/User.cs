@@ -13,8 +13,8 @@ namespace TuzluSozluk.Domain.Entities
         public virtual ICollection<Entry> Entries { get; set; }
         public virtual ICollection<EntryComment> EntryComments { get; set; }
         public virtual ICollection<EntryVote> EntryVotes { get; set; }
+        public virtual ICollection<EntryCommentVote> EntryCommentFavorites { get; set; }
         public virtual ICollection<EntryFavorite> EntryFavorites { get; set; }
         public virtual ICollection<EntryCommentFavorite> EntryCommentVotes { get; set; }
-        public virtual ICollection<EntryCommentVote> EntryCommentFavorites { get; set; }
     }
 }

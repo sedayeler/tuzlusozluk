@@ -33,7 +33,7 @@ namespace TuzluSozluk.Persistence.Contexts
             var _context = serviceProvider.GetService<TuzluSozlukContext>();
 
             var users = GetUsers();
-            var userIds = users.Select(i => i.Id);
+            var userIds = users.Select(u => u.Id);
 
             await _context.users.AddRangeAsync(users);
 
@@ -59,6 +59,7 @@ namespace TuzluSozluk.Persistence.Contexts
                 .Generate(1000);
 
             await _context.entry_comments.AddRangeAsync(comments);
+
             _context.SaveChanges();
         }
     }

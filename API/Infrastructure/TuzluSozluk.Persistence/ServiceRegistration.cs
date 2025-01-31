@@ -14,9 +14,10 @@ namespace TuzluSozluk.Persistence
 {
     public static class ServiceRegistration
     {
-        public static void AddPersistenceService(this IServiceCollection services, IConfiguration configuration)
+        public static void AddPersistenceServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<TuzluSozlukContext>(options => options.UseNpgsql(configuration.GetConnectionString("PostgreSQL")));
+
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IEmailConfirmationRepository, EmailConfirmationRepository>();
 

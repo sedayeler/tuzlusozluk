@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Common\TuzluSozluk.Common\TuzluSozluk.Common.csproj" />
+    <ProjectReference Include="..\..\Core\TuzluSozluk.Application\TuzluSozluk.Application.csproj" />
     <ProjectReference Include="..\..\Core\TuzluSozluk.Domain\TuzluSozluk.Domain.csproj" />
   </ItemGroup>
 

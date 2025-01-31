@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TuzluSozluk.Common
 {
-    public class PasswordEncryptor
+    public static class PasswordEncryptor
     {
         public static string Encrypt(string password)
         {
