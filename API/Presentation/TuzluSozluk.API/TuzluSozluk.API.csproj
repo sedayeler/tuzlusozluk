@@ -7,10 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.12" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -22,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Core\TuzluSozluk.Application\TuzluSozluk.Application.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\TuzluSozluk.Infrastucture\TuzluSozluk.Infrastucture.csproj" />
     <ProjectReference Include="..\..\Infrastructure\TuzluSozluk.Persistence\TuzluSozluk.Persistence.csproj" />
   </ItemGroup>
 

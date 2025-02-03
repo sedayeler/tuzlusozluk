@@ -1,4 +1,4 @@
-﻿using TuzluSozluk.Common.Entities;
+﻿using TuzluSozluk.Common;
 using TuzluSozluk.Domain.Entities.Common;
 
 namespace TuzluSozluk.Domain.Entities

@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TuzluSozluk.Application.Repositories;
+using TuzluSozluk.Application.Services;
 using TuzluSozluk.Persistence.Contexts;
 using TuzluSozluk.Persistence.Repositories;
+using TuzluSozluk.Persistence.Services;
 
 namespace TuzluSozluk.Persistence
 {
@@ -28,6 +30,8 @@ namespace TuzluSozluk.Persistence
             services.AddScoped<IEntryCommentRepository, EntryCommentRepository>();
             services.AddScoped<IEntryCommentVoteRepository, EntryCommentVoteRepository>();
             services.AddScoped<IEntryCommentFavoriteRepository, EntryCommentFavoriteRepository>();
+
+            services.AddScoped<IUserService, UserService>();
         }
     }
 }
