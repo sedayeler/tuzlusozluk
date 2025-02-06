@@ -4,9 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TuzluSozluk.Common.Models.ResponseModels;
 
-namespace TuzluSozluk.Common.Models.RequestModels
+namespace TuzluSozluk.Application.Features.Commands.LoginUser
 {
     public class LoginUserCommandRequest : IRequest<LoginUserCommandResponse>
     {

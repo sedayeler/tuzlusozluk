@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TuzluSozluk.Common.Models.RequestModels;
+using TuzluSozluk.Application.DTOs;
+using TuzluSozluk.Application.Features.Commands.LoginUser;
 using TuzluSozluk.Domain.Entities;
 
 namespace TuzluSozluk.Application.Mapping
@@ -13,7 +14,8 @@ namespace TuzluSozluk.Application.Mapping
     {
         public MappingProfile()
         {
-            CreateMap<LoginUserCommandRequest, User>().ReverseMap();
+            CreateMap<CreateUserRequest, User>();
+            CreateMap<LoginUserCommandRequest, User>().ReverseMap();      
         }
     }
 }

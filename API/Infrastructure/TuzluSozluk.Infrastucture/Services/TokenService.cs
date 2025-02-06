@@ -23,7 +23,6 @@ namespace TuzluSozluk.Infrastucture.Services
 
         public string CreateToken(int minute, User user)
         {
-
             SymmetricSecurityKey securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Token:SecurityKey"]));
             SigningCredentials signingCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
             DateTime expiration = DateTime.UtcNow.AddMinutes(minute);

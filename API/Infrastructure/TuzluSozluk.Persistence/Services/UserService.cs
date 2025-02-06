@@ -8,6 +8,7 @@ using TuzluSozluk.Common.Exceptions;
 using TuzluSozluk.Common;
 using TuzluSozluk.Domain.Entities;
 using TuzluSozluk.Application.Repositories;
+using TuzluSozluk.Application.DTOs;
 
 namespace TuzluSozluk.Persistence.Services
 {
@@ -20,6 +21,39 @@ namespace TuzluSozluk.Persistence.Services
         {
             _userRepository = userRepository;
             _tokenService = tokenService;
+        }
+
+        public async Task<CreateUserResponse> CreateUserAsync(CreateUserRequest request)
+        {
+            User existingUserByUsername = await _userRepository.GetSingleAsync(u => u.UserName == request.UserName);
+            if (existingUserByUsername is not null)
+            {
+                throw new DatabaseValidationException("Oops! That username is taken.");
+            }
+
+            User existingUserByEmail = await _userRepository.GetSingleAsync(u => u.Email == request.Email);
+            if (existingUserByEmail is not null)
+            {
+                throw new DatabaseValidationException("Oops! That email is already in use.");
+            }
+
+            User user = new()
+            {
+                FirstName = request.FirstName,
+                LastName = request.LastName,
+                UserName = request.UserName,
+                Email = request.Email,
+                Password = PasswordEncryptor.Encrypt(request.Password)
+            };
+            await _userRepository.AddAsync(user);
+            await _userRepository.SaveAsync();
+
+            return new()
+            {
+                UserId = user.Id,
+                Succeeded = true,
+                Message = "You’ve successfully signed up!"
+            };
         }
 
         public async Task<string> LoginAsync(string email, string password)

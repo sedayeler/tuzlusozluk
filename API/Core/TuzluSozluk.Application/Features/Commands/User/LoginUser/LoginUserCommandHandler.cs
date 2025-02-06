@@ -5,8 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TuzluSozluk.Application.Services;
-using TuzluSozluk.Common.Models.RequestModels;
-using TuzluSozluk.Common.Models.ResponseModels;
 
 namespace TuzluSozluk.Application.Features.Commands.LoginUser
 {

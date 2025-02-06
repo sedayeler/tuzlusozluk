@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TuzluSozluk.Common.Models.ResponseModels
+namespace TuzluSozluk.Application.Features.Commands.LoginUser
 {
     public class LoginUserCommandResponse
     {
