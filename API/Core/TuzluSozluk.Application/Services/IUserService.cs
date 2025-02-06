@@ -11,5 +11,6 @@ namespace TuzluSozluk.Application.Services
     {
         Task<CreateUserResponse> CreateUserAsync(CreateUserRequest request);
         Task<string> LoginAsync(string email, string password);
+        Task<bool> UpdateUserAsync(UpdateUserRequest request);
     }
 }

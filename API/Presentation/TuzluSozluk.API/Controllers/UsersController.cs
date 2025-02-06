@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using TuzluSozluk.Application.Features.Commands.LoginUser;
+using TuzluSozluk.Application.Features.Commands.UpdateUser;
 using TuzluSozluk.Application.Features.Commands.User.CreateUser;
 
 namespace TuzluSozluk.API.Controllers
@@ -27,6 +28,13 @@ namespace TuzluSozluk.API.Controllers
         public async Task<IActionResult> LoginUser(LoginUserCommandRequest request)
         {
             LoginUserCommandResponse response = await _mediator.Send(request);
+            return Ok(response);
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> UpdateUser(UpdateUserCommandRequest request)
+        {
+            UpdateUserCommandResponse response = await _mediator.Send(request);
             return Ok(response);
         }
     }

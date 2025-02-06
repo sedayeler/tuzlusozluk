@@ -31,7 +31,7 @@ namespace TuzluSozluk.Application.Features.Commands.User.CreateUser
 
             return new()
             {
-                UserId = response.UserId,
+                UserId = response.Id,
                 Succeeded = response.Succeeded,
                 Message = response.Message
             };

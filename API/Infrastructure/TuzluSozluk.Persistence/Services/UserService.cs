@@ -27,15 +27,11 @@ namespace TuzluSozluk.Persistence.Services
         {
             User existingUserByUsername = await _userRepository.GetSingleAsync(u => u.UserName == request.UserName);
             if (existingUserByUsername is not null)
-            {
                 throw new DatabaseValidationException("Oops! That username is taken.");
-            }
 
             User existingUserByEmail = await _userRepository.GetSingleAsync(u => u.Email == request.Email);
             if (existingUserByEmail is not null)
-            {
                 throw new DatabaseValidationException("Oops! That email is already in use.");
-            }
 
             User user = new()
             {
@@ -50,9 +46,9 @@ namespace TuzluSozluk.Persistence.Services
 
             return new()
             {
-                UserId = user.Id,
+                Id = user.Id,
                 Succeeded = true,
-                Message = "You’ve successfully signed up!"
+                Message = "You’ve successfully signed up."
             };
         }
 
@@ -72,6 +68,23 @@ namespace TuzluSozluk.Persistence.Services
             string token = _tokenService.CreateToken(15, user);
 
             return token;
+        }
+
+        public async Task<bool> UpdateUserAsync(UpdateUserRequest request)
+        {
+            User user = await _userRepository.GetByIdAsync(request.Id, false);
+            if (user == null)
+                throw new DatabaseValidationException("Oops! User not found.");
+
+            user.FirstName = request.FirstName;
+            user.LastName = request.LastName;
+            user.UserName = request.UserName;
+            user.Email = request.Email;
+
+            _userRepository.Update(user);
+            await _userRepository.SaveAsync();
+
+            return true;
         }
     }
 }

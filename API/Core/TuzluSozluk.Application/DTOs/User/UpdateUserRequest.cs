@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace TuzluSozluk.Application.DTOs
 {
-    public class CreateUserResponse
+    public class UpdateUserRequest
     {
         public Guid Id { get; set; }
-        public bool Succeeded { get; set; }
-        public string Message { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string UserName { get; set; }
+        public string Email { get; set; }
     }
 }
